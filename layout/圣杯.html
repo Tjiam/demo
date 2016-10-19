@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>圣杯布局</title>
+  <style>
+      *{
+          padding: 0;
+          margin: 0;
+      }
+      .header,.footer{
+        background: grey;
+        height: 50px;
+      }
+      .container{
+         padding:0 100px;
+      }
+      .container:after{
+          content:"";
+          display: block;
+          clear: both;
+      }
+      .main{
+          background:  #5ad429;
+          float:left;
+          width: 100%;
+          text-align: center;
+      }
+      .aside{
+          width: 100px;
+          height: 300px;
+          background: #2ea8d8;
+          float:left;
+          margin-left: -100%;
+          position: relative;
+          left:-100px;
+           text-align: center;
+      }
+    .extra{
+        width: 100px;
+        height: 300px;
+        background: #c16b2b;
+        float:left;
+        margin-left: -100px;
+        position: relative;
+        left:100px;
+         text-align: center;
+    }
+</style>
+
+
+</head>
+<body>
+      <div class="header">header</div>
+      <div class="container">
+          <div class="main">
+                  <strong>MAIN</strong>
+                  <p>float:left</p>
+                  <p>width:100%</p>
+                  <p>父元素设置padding值为ASIDE和EXTRA的width</p>
+                  <strong>ASIDE</strong>
+                  <p>float : left</p>
+                  <p>margin : -100%</p>
+                  <p>relative定位</p>
+                  <p>left : -width(自身)</p>
+                  <strong>EXTRA</strong>
+                  <p>float : left</p>
+                  <p>margin : -width(自身)</p>
+                  <p>relative定位</p>
+                  <p>left : width(自身)</p>
+          </div>
+          <div class="aside">
+                <strong>ASIDE</strong>
+          </div>
+          <div class="extra">
+                <strong>EXTRA</strong>
+          </div>
+      </div>
+      <div class="footer">footer</div>
+</body>
+</html><!--本注释用于清除实名认证提示

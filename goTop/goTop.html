@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>goTop</title>
+		 <script src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+		<style>
+		.to-top {
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			font-size: 30px;
+			border: 2px solid #333;
+			border-radius: 50%;
+			display:none;
+			padding: 8px;
+			cursor: pointer;
+			position: fixed;
+			bottom: 50px;
+			right: 50px;
+			background-color: #fff;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+			transition: all 0.3s ease;
+		}
+		.to-top:hover {
+			color: #fff;
+			background-color: #666;
+			border: 2px solid #666;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+		.to-top> i {
+			display: inline-block;
+			margin-top: 3px;
+		}
+		.leave {
+			animation: leave 0.3s forwards;
+		}
+		@keyframes leave {
+			0%  {
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(0);
+			}
+		}
+		.enter {
+			animation: enter 0.3s forwards ;
+		}
+
+		@keyframes enter {
+			0% {
+				transform: scale(0);
+			}
+			80%{
+				transform: scale(1.4);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+		.box{
+			height: 3000px;
+			border: 10px solid #ccc;
+		}
+		</style>
+		<link rel="stylesheet" href="./style.css" type="text/css">	                                                                                                                                                                                                                ~
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="to-top"><i class="icon-arrow-up"></i></div>
+		<script src="demo.js"></script>
+	</body>
+</html><!--本注释用于清除实名认证提示
